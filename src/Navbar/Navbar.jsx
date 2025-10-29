@@ -5,36 +5,31 @@ import "./Navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
+
         <div className="logo">
           <NavLink to="/" onClick={closeMenu}>
-           Journey Through Ages
+            Journey Through Ages
           </NavLink>
         </div>
 
-        {/* Menu Toggle Button (for mobile) */}
+
         <button
           className={`menu-toggle ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
+          aria-label="Toggle Menu"
         >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
 
-        {/* Nav Links */}
+       
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           <li>
             <NavLink to="/" onClick={closeMenu}>
