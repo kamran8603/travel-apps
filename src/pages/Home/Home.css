@@ -1,16 +1,77 @@
-.discover-india-container{
-    border: 2px solid blue;
-    display: flex;
-    justify-content:space-around ;
-    align-items: center;
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #86472C;
+  min-height: 50vh;
+  line-height: 1.5rem;
+  padding-top: 20px;
+  background: transparent;
 }
-.left-section{
-    border: 2px solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.third-section{
+  display: flex;
+  flex-direction: column;
+ padding-top: 3rem;
+  color: #86472C;
+  background: transparent;  
+  padding-left: 3rem;
 }
-.right-section{
-    border:2px solid white 
+
+
+.home h1, .third-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.paragraph-first{
+    font-weight: bold;
+}
+
+
+.home p,  .third-section p {
+  max-width: 900px;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+
+
+@media (max-width: 992px) {
+  .home h1, .third-section h1 {
+    font-size: 2rem;
+  }
+
+  .home p,  .third-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .home,  .third-section  {
+    padding: 40px 20px;
+  }
+
+  .home h1,  .third-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .home p,  .third-section p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Small Mobiles (below 480px) */
+@media (max-width: 480px) {
+  .home h1  .third-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .home p  .third-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 }

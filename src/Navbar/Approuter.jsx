@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
@@ -8,23 +7,17 @@ import "./approuter.css";
 const Approuter = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-
   const backgroundImage = backgrounds[currentPath] || backgrounds["/"];
-
   return (
-    <div
-      className="app-layout"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
-    >
+    <div>
       <div className="overlay"></div>
-
-
-      <Navbar />
-
-   
-      <main className="main-content">
+      <div   className="app-layout"
+        style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}>
+        <Navbar />
+      </div>
+       <main className="main-content">
         <Outlet />
       </main>
     </div>
